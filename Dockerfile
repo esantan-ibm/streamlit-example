@@ -4,6 +4,6 @@ WORKDIR /opt/app
 
 COPY ./ ./
 
-RUN python -m venv .venv
+RUN python3 -m pip install -r requirements.txt
 
-CMD . .venv/bin/activate && python3 -m streamlit run streamlit_app.py --server.port 8080
+CMD python3 -m streamlit run streamlit_app.py --server.port 8080
